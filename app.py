@@ -21,12 +21,12 @@ qa_pairs = [
     {
         "question": "I just want something to support my general health and maybe boost my energy.",
         "answer": "*That’s a great goal, you might consider NutriPlus Daily Multi—it could be a helpful option for everyday wellness.*",
-        "markdown": True
+        "markdown": False
     }
 ]
 
 # Match user input against known questions using fuzzy logic
-def get_response(user_input, threshold=80):
+def get_response(user_input, threshold=70):
     for qa in qa_pairs:
         score = fuzz.token_sort_ratio(user_input.lower(), qa["question"].lower())
         if score >= threshold:
@@ -37,7 +37,7 @@ def get_response(user_input, threshold=80):
 def stream_text(text):
     for char in text:
         yield char
-        time.sleep(0.02)  # Adjust delay for streaming effect
+        time.sleep(0.04)  # Adjust delay for streaming effect
 
 # Initialize chat history in session state
 if "messages" not in st.session_state:
