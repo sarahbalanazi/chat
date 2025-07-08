@@ -15,12 +15,12 @@ st.markdown(
 qa_pairs = [
     {
         "question": "Hi, I am looking for a multivitamin supplement.",
-        "answer": "Hello. Looking into a multivitamin is a smart move. Let’s make sure you get the one that meets your needs.",
+        "answer": "Hello, Looking into a multivitamin is a smart move. Let’s make sure you get the one that meets your needs.",
         "markdown": False
     },
     {
         "question": "I just want something to support my general health and maybe boost my energy.",
-        "answer": "*That’s a great goal, you might consider NutriPlus Daily Multi—it could be a helpful option for everyday wellness.*",
+        "answer": "That’s a great goal, you might consider NutriPlus Daily Multi—it could be a helpful option for everyday wellness.",
         "markdown": False
     }
 ]
@@ -37,7 +37,7 @@ def get_response(user_input, threshold=70):
 def stream_text(text):
     for char in text:
         yield char
-        time.sleep(0.04)  # Adjust delay for streaming effect
+        time.sleep(0.05)  # Adjust delay for streaming effect
 
 # Initialize chat history in session state
 if "messages" not in st.session_state:
