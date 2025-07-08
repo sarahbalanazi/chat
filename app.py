@@ -63,7 +63,7 @@ if user_input:
     # Display 'typing...' simulation
     with st.chat_message("assistant"):
         typing_placeholder = st.empty()
-        typing_placeholder.markdown("_Assistant is typing..._")
+        typing_placeholder.markdown("_ AI Assistant is thinking..._")
         time.sleep(1.5)  # Simulate response delay
 
         # Get response and replace the placeholder
